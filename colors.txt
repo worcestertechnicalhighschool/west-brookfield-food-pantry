@@ -1,0 +1,7 @@
+Headings + Text: #000
+Navigation Bar + Heading Borders: #f4c66d
+Footer: #fe2257
+Background: #fcf2ec
+Panels: #fff
+
+Translation Box: rgb(193 71 109 / 12%)

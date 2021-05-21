@@ -1,0 +1,393 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.max-sized{
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  background-color: transparent;
+}
+
+html, body {
+  background-color: #fcf2ec;
+  background: linear-gradient(153deg, #614385, #feb47b);
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  min-height:100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main{
+  margin: 8px;
+}
+
+article {
+  background-color: #fff;
+  background: cover;
+  /*margin: -10px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.top-article {
+  border-radius: 45px 45px 0px 0px;
+  margin-top: -45px;
+}
+
+.bottom-article {
+  border-radius: 0px 0px 45px 45px;
+  margin-bottom: 20px;
+}
+
+/* Used when there are less than 2 articles. */
+.solo-article {
+  border-radius: 45px;
+  margin-bottom: 20px;
+  margin-top: -45px;
+}
+
+/* this is the font used for all of the paragraphs on the wireframe. */
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
+p {
+  font-family: 'Aleo', serif;
+  line-height: 2;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+}
+
+/* the same thing except for the article headings. */
+/* the font is linked in the head of each html file. */
+article h1 {
+  font-family: 'Bitter', serif;
+  size: 28px;
+}
+
+header{
+  padding: 0;
+  padding-bottom: 50px;
+  background-color: #f4c66d;
+  margin: 0;
+}
+
+.header-top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:  transparent;
+}
+
+/* ---brand logo CSS--- */
+.brand{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-family: 'Aleo', serif;
+  text-emphasis-style: strong;
+  transition: all ease 0.4;
+  text-shadow: 2px 2px 0 black;
+  
+}
+
+.brand:hover{
+  /* text-decoration: underline; */
+  text-shadow: 4px 4px 0 black;
+}
+
+/* Don Trying to work on nav bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  transparent;
+  display: flex;
+  justify-content: space-around;
+  
+  
+}
+
+li {
+  font-family: 'Aleo', serif;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-family: 'Aleo', serif;
+  text-emphasis-style: strong;
+  
+  border-radius: 5px;
+}
+
+li a:hover {
+  background-color: white;
+  text-decoration: underline;
+  transition: all ease 0.7s;
+  border-radius: 10px;
+  color: black;
+}
+
+nav_circle{
+  width: 55%
+}
+
+/* ---hamburger CSS--- (Only appers when screen is no more than 480px wide) */
+button.hamburger{
+  /*border: none;*
+  /*background: none;*/
+  display: block;
+  position: relative;
+  
+  padding: 0;
+  margin: 0;
+  width: 6rem;
+  height: 5rem;
+  
+  border: none;
+  
+  background: none;
+  z-index: 2;
+}
+/* container holding the 3 lines */
+.hamburger-line-container{
+  /*
+  width: 2.375rem;
+  height: 2rem;
+  */
+  display: flex;
+  justify-content: center;
+  /*background-color: green;*/
+  width: 100%;
+  height: 100%;
+} 
+
+/* applied to all lines */
+.hamburger-line{
+  position: absolute;
+  display: block;
+  border-radius: 15px;
+  
+  background-color: #fff;
+  
+  height: 0.5rem;
+  width: 5.2rem;
+  /*margin: 0 0.5rem;*/
+
+  transition: transform 0.15s;
+}
+
+/* applied to each specific line */
+.hamburger-line-1{
+  top: 0.5rem;
+  transform-origin: top left;
+}
+
+.hamburger-line-2{
+  top: 2.2rem;
+}
+
+.hamburger-line-3{
+  bottom: 0.5rem;
+  transform-origin: bottom left;
+}
+
+/* applied when the hamburger is clicked */
+.hamburger.open .hamburger-line-1{
+  transform: translateX(0.8rem) rotate(45deg);
+}
+
+.hamburger.open .hamburger-line-2{
+  transform: scale(0);
+}
+
+.hamburger.open .hamburger-line-3{
+  transform: translateX(0.8rem) rotate(-45deg);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/* Background image for the header */
+.header-bg{
+  width: 100%;
+  /* height: 500px; */
+  color: white;
+  text-align: center;
+  
+  background-image: url(https://westbrookfieldfoodpantry.jeffhow.repl.co/assets/images/header_bg.jpg) ;
+  
+  /* Alternate image just in case we decide to switch back. https://westbrookfieldfoodpantry.jeffhow.repl.co/assets/images/header_bg.jpg */
+  max-width:1000px;
+ 
+  background-size: cover;
+  border-top-left-radius: 45px;
+  /* padding: 130px 45px 145px 50px; */
+  background-position: center center;
+  display: flex;
+  margin-top:-45px;
+}
+/* css for the text holding the background image for the header */
+.header-bg-text{
+  
+
+  margin: 50px;
+  font-size: 5rem;
+  color: white;
+  background-color:rgba(0,0,0,0.2);
+  text-shadow: black 2px 2px 0;
+  /* max-width: 500px; */
+  padding: 0px;
+   
+}
+
+/* ---Feeback Forms' CSS--- */
+.feedback-form{
+  border-radius: 15px ;
+  border-color: rgb(219, 157, 64);
+  border-style: double;
+}
+.submit{
+  background-color: #fe2257;
+  color: white;
+  border-radius: 15px;
+  height: 40px;
+  max-height: 45px;
+  width: 100px;
+}
+.submit:hover{
+ transition-duration : 1s;
+  background-color: #942b44;
+}
+
+footer {
+  background-color: #fe2257;
+  padding: 5px;
+  padding-bottom: 40px;
+  width: 100%
+}
+
+footer p {
+  size: 24px;
+  margin: 18px;
+  color: #fff;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover  {
+  text-decoration: underline;
+}
+
+.L p {
+  margin: 0;
+  padding: 0;
+  background-color:  rgb(193 71 109 / 0%);
+}
+
+.L {
+  border-radius: 10px;
+  background-color:  rgb(193 71 109 / 12%);
+  padding: 10px;
+  margin: 20px;
+  display: inline-block;
+}
+
+/* media breakpoints that control when the hamburger and navbar show up */
+@media screen and (min-width: 480px) {
+  button.hamburger{
+    display: none;
+  }
+
+  .responsive-navbar, .responsive-navbar-container{
+    display:none;
+  }
+
+  /* testing, don't remove yet. - chris */
+  /* pushes the l/r margins of the main tag inward b 3%. applied to a div wrapped around the main tag. */
+  .push-in {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar{
+    display: none;
+  }
+
+  .responsive-navbar-container{
+    display: block;
+    position: relative;
+  }
+
+  .responsive-navbar{
+    width: 100%;
+    margin-top: 1%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.40s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: translateX(200%);
+    /*overflow: hidden;*/
+  }
+
+  .responsive-navbar ul{
+    flex-direction: column;
+    border-radius: 45px 0 45px 0;
+    background-color: #d49044;
+  }
+
+  /*selects the responsive navbar when the hamburger is activated*/
+  .responsive-navbar.open{
+    transform: translateX(0);
+  }
+
+  .brand{
+    font-size: 1.95rem;
+    padding: 14px 14px;
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+}
+
+/* lines up the navbar links. this might clash with something else in here so i've disabled it for now. */
+/*
+nav ul li a {
+  margin-top: 25px;
+}*/
+
+/* facebook widget */
+.fb {
+  float: right;
+  margin: 18px;
+}
+
+/* breaks brand title on mobile ONLY */
+@media screen and (min-width: 600px)  {
+  .mobile-break { display: none; }
+}

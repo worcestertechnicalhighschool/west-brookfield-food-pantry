@@ -1,0 +1,153 @@
+
+ <!-- contact xavier   -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The West Brookfield Food Pantry</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet"> 
+    <meta name="description" content="The West Brookfield food pantry's official website">
+    <meta property="og:title" content="The West Brookfield Food Pantry">
+    <meta property="og:description" content="The West Brookfield food pantry's official website">
+    <!-- <meta property="og:image" content="image.jpg"> -->
+    <!-- <meta property="og:image:alt" content="Image description"> -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#FF00FF">
+    <!-- <meta property="og:url" content="https://www.mywebsite.com/page"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('YOUR_USER_ID');
+        })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // generate a five digit number for the contact_number variable
+          this.contact_number.value = Math.random() * 100000 | 0;
+          // these IDs from the previous steps
+          emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(function() {
+              console.log('SUCCESS!');
+            }, function(error) {
+              console.log('FAILED...', error);
+            });
+          });
+        }
+    </script>
+  </head>
+  <body>
+    <!-- header Donovan -->
+    <header class="max-sized">
+      <div class="header-top">
+        
+          <!-- header Donovan -->
+          <h1><a href="index.html" class="brand">Sharing Cupboard Food Pantry</a></h1>
+
+          <!-- nav sean-->   
+          <button class="hamburger" type="button" aria-expanded="false">
+            <span class="hamburger-line-container">
+              <span class="hamburger-line hamburger-line-1"></span>
+              <span class="hamburger-line hamburger-line-2"></span>
+              <span class="hamburger-line hamburger-line-3"></span>
+            </span>
+          </button>
+          
+      </div>
+
+      <div class="responsive-navbar-container">
+        <nav class="responsive-navbar">
+          <ul>
+            <li> <a href="faq.html" class="active">FAQs</a></li>
+            <li><a href="contact.html" class="active">Contact Us!</a></li>
+            <li><a href="covidGuidance.html" class="active">COVID-19 Guidance</a></li>
+            <!-- <div class="nav_circle"><p>"Pink Circle from Wireframe in production" </p></div> -->
+          </ul>
+        </nav>
+      </div>
+      
+      <nav class="navbar">
+        <ul>
+          <li> <a href="faq.html" class="active">FAQs</a></li>
+          <li><a href="contact.html" class="active">Contact Us!</a></li>
+          <li><a href="covidGuidance.html" class="active">COVID-19 Guidance</a></li>
+          <!-- <div class="nav_circle"><p>"Pink Circle from Wireframe in production" </p></div> -->
+        </ul>
+      </nav>
+    </header>
+    <div class="push-in">
+      <main class="max-sized">
+        <article class="solo-article">
+          <h1>Contact Information</h1>
+          <h1>Phone</h1>
+          <p>You can reach us by phone at <b>(508) 867-7078</b></p>
+          <h1>Email</h1>
+          <p>You can reach us by email at <a href="mailto:info@westbrookfielducc.org"><b>info@westbrookfielducc.org</b></a></p>
+
+        <!-- Google map Iframe -->
+         
+      <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=36%20N%20Main%20St,%20West%20Brookfield,%20MA%2001585+(First%20Congressional%20Church)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+     </div>
+        </article>
+        <!--
+          <article class="bottom-article">
+          <h1>Send Us a Message!</h1>
+          <div class="message">
+            <label> Subject</label><br>
+            <input class="feedback-form" type="text" name="subject"><br>
+            <label>Message</label><br>
+            <textarea class="feedback-form" name="message"></textarea><br>
+            <input  class ="submit" type="submit" value="Submit">
+          </div>
+        </article>
+        -->
+        <!-- <form id="contact-form">
+          <input type="hidden" name="contact_number"><br>
+          <label>Phone</label>
+          <input type="text" name="user_name"><br>
+          <label>Email</label>
+          <input type="email" name="user_email"><br>
+          <label>Address</label>
+          <input type="text" name="user_address"><br><br>
+        </form> -->
+      </main>
+    </div>
+
+     
+
+
+
+
+    <!-- footer chris -->
+    <footer class="max-sized">
+      <p>
+        &copy; 2021 Sharing Cupboard Food Bank<br>
+        First Congregational Church - West Brookfield, MA<br>
+        Website designed by <a target="_blank" href="https://techhigh.us/webdev/">students at Worcester Technical High School</a>
+      </p>
+
+    <!-- Translations Donovan -->
+    <div class = "L" id="google_translate_element" ><p class="L">Translate this page:</p></div>
+    
+    </footer>
+    <script>
+
+      
+    function googleTranslateElementInit(){
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <!-- Refrence to the google translate API -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
